@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    padding: 10px;
+    background-color: #5F30E2;
+    color: white;
+}
+header h1{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+.container{
+    max-width: 1100px;
+}
+.content1 {
+    padding: 20px;
+}
+.content2 {
+    padding: 20px;
+}
+.content1 h2{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.card{
+    margin-top: 10px;
+    padding: 50px 50px 30px 50px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 30px;
+}
+.card1{
+    margin-top: 20px;
+    padding: 25px;
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 30px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form .form-text, .form-check-input{
+    background-color: #d9d8e1;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border-color: #5F30E2;
+    transition: .3s;
+}
+form .form-text:focus{
+    outline: 0 none;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075);
+    background-color: #d9d8e1;
+    border-color: #5F30E2;
+    border-width: 2px;
+}
+.form-check-input:focus {
+    border-color: #5F30E2;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075);
+}
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+.content1 button{
+    background-color: #5F30E2;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    transition: .3s;
+}
+.content1 button:hover{
+    transform: scale(1.05);
+}
+.search{
+    border-radius: 30px;
+    display: inline-flex;
+}
+input[type=search] {
+    border: none;
+    border-radius: 30px 0 0 30px;
+}
+input[type=search]:focus {
+    border-color: #5F30E2;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075);
+}
+.btn-search{
+    background-color: #5F30E2;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    transition: .3s;
+}
+.btn-search:hover{
+    background-color: #4726a3;
+}
+.content2 h2{
+    font-weight: 600;
+    font-size: 18px;
+}
+.item{
+    overflow: hidden;
+    background-color: white;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border-color: #5F30E2;
+    border-width: 2px;
+    border-style: solid;
+}
+.book{
+    float: left;
+}
+.item .button{
+    float: right;
+}
+.book h3{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.book h4{
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+.book h5{
+    font-size: 12px;
+}
+.item .button{
+    justify-content: flex-end;
+}
+.item .button{
+    display: inline;
+}
+.button button{
+    position: relative;
+    border: none;
+    font-size: 25px;
+    top: 12px;
+    right: 10px;
+}
+.btn-checklist {
+    background: url('../public/image/check-outline.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+    margin-right: 15px;
+    transition: .2s;
+}
+.btn-checklist:hover {
+    background: url('../public/image/check-solid.svg');
+}
+.btn-trash {
+    background: url('../public/image/trash-outline.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+    transition: .2s;
+}
+.btn-trash:hover {
+    background: url('../public/image/trash-fill.svg');
+}
+.btn-undo {
+    background: url('../public/image/undo-ouline.svg');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+}
+.btn-undo:hover {
+    transform: scale(1.1);
+}
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #5F30E2;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    border-radius: 40px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+@media only screen and (max-width: 500px) {
+    .card{
+        padding: 30px;
+    }
+    .button {
+        margin-bottom: 10px;
+    }
+    .btn-checklist{
+        width: 30px;
+        height: 30px;
+    }
+    .btn-trash{
+        width: 30px;
+        height: 30px;
+    }
+    .btn-undo{
+        width: 30px;
+        height: 30px;
+    }
+}

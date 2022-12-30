@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="One day one book, keep it up!">
+    <meta name="theme-color" content="#DB0000"/>
+ 
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="manifest" href="./app.webmanifest">
+    <link rel="icon" href="./favicon.png">
+
+    <title>Bookshelf Apps</title>
+</head>
+<body>
+    <header>
+        <h1>Bookshelf Apps</h1>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <div class="content1">
+                    <div class="card shadow">
+                        <h2>Masukkan Buku Baru</h2>
+                        <form class="form" action="#" id="form">
+                            <div class="">
+                            <input type="text" class="form-control form-text" id="title" placeholder="Title" required>
+                            </div>
+                            <div class="">
+                            <input type="text" class="form-control form-text" id="authors" placeholder="Authors" required>
+                            </div>
+                            <div class="">
+                            <input type="text" class="form-control form-text" id="years" placeholder="Release Years" required>
+                            </div>
+                            <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="checkbox">
+                            <label class="form-check-label fw-bold" for="checkbox">Sudah dibaca</label>
+                            </div>
+                            <button type="submit" value="submit" name="submit" class="btn-submit shadow">Add Book</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content2">
+                    <div class="card shadow">
+                        <div class="search shadow">
+                            <input id="searchbar" class="form-control" type="search" placeholder="Search" onkeyup="search()">
+                            <button class="btn-search" type="button"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="list-container card1 shadow">
+                            <h2>Belum dibaca</h2>
+                            <div class="list" id="books">
+                            </div>
+                        </div>
+                        <div class="list-container card1 shadow">
+                            <h2>Sudah dibaca</h2>
+                            <div class="list" id="completed-books">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div id="snackbar">Succesfully!</div>
+  </body>
+</body>
+</html>
