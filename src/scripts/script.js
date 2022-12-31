@@ -4,6 +4,7 @@ const SAVED_EVENT = 'saved-book';
 const STORAGE_KEY = 'BOOKSHELF_APPS';
 
 const main = () => {
+
   function generateId() {
     return +new Date();
   }
@@ -206,7 +207,7 @@ const main = () => {
     });
   
     function search() {
-      const searchBar = document.querySelector("#searchbar").value.toUpperCase();
+      const searchBar = document.querySelector("#searchBar").value.toUpperCase();
       const bookList = document.querySelector(".list");
       const item = document.querySelectorAll(".item");
       const bTitle = document.getElementsByTagName("h3");
@@ -225,6 +226,8 @@ const main = () => {
         }
       }
     }
+    const searchBar = document.getElementById("searchBar");
+    searchBar.addEventListener("keyup", search);
 }
 
 export default main;
